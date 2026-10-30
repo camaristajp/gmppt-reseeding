@@ -1,0 +1,11 @@
+# Pinned exactly. scikit-learn is load-bearing: the model artefacts in
+# models/ are pickles and a different minor version may refuse to load them
+# or load them with altered behaviour.
+
+scikit-learn==1.9.0
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.2
+pvlib==0.15.2
+joblib==1.5.3
+pyarrow==25.0.1
