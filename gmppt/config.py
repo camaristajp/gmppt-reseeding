@@ -1,16 +1,3 @@
-"""
-Central configuration for the GMPPT Phase 1 codebase.
-
-Two kinds of constant live here:
-
-1. FIXED PROTOCOL CONSTANTS (Section 9.10). These are "set here and not changed
-   once Phase 1 begins." Changing them mid-study invalidates cross-phase
-   comparison, so they live in exactly one place and are imported everywhere.
-
-2. Reproducibility settings: the master seed and derived per-purpose seeds, and
-   the project paths. Everything random in this project derives its seed from
-   MASTER_SEED so a single number reproduces the entire study.
-"""
 from __future__ import annotations
 import hashlib
 import subprocess
@@ -31,7 +18,7 @@ VERIFICATION_LOG = RESULTS_DIR / "phase1_verification_log.md"
 # --------------------------------------------------------------------------
 # Reproducibility
 # --------------------------------------------------------------------------
-MASTER_SEED = 20260901  # study start month; arbitrary but recorded
+MASTER_SEED = 20260901  
 
 def seed_for(purpose: str) -> int:
     """Deterministic per-purpose seed derived from the master seed.
